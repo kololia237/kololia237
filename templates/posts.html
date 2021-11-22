@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Усі статті на сайті
+{% endblock %}
+
+{% block body %}
+<h1>Усі статті на сайті</h1>
+
+    {% if articles|length > 0%}
+
+        {%for el in articles%}
+        <div>
+            <h2>{{el.title}}</h2>
+            <p>{{el.intro}}</p>
+            <p><b>Дата:{{el.date.date() }}</b></p>
+            <a href="/posts/{{  el.id }}">Детальніше</a>
+        </div>
+        {%endfor%}
+    {% else %}
+    <p>Ще немає статтей на сайті</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<h1>Додавання статті</h1>
+<form method="post">
+    <label for="title"></label><input type="text" name="title" id="title" ><br>
+    <label for="intro"></label><textarea name="intro" id="intro"></textarea><br>
+    <label for="text"></label><textarea name="text" id="text"></textarea><br>
+    <input type="submit" value="Відправити">
+
+</form>
+{% endblock %}
